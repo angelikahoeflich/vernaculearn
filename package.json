@@ -1,0 +1,32 @@
+{
+  "name": "vernaculearn",
+  "version": "0.1.0",
+  "description": "Files for supporting vernaculearn.com",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/you-dot-dev/vernaculearn.git"
+  },
+  "keywords": [
+    "flash",
+    "cards",
+    "education",
+    "professional",
+    "development"
+  ],
+  "author": "Paul Coe <paul@you.dev>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/you-dot-dev/vernaculearn/issues"
+  },
+  "homepage": "https://github.com/you-dot-dev/vernaculearn#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
