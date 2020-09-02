@@ -1,0 +1,7 @@
+{
+    "username": "Jane Doe",
+    "email": "jdoe@mail.com",
+    "password": "a76sd5v87a6s5dvf6asd5vf7as6d5vafis7d65fva6c5yvfxzcvzxcv==",
+    "email_verfied": true,
+    "avatar": "https://img.vernaculearn.com/users/blahblah.jpg"
+}
