@@ -15,12 +15,14 @@ a {
 	text-decoration: none;
 
 }
+/* Universal Utilities */
 
 #container {
 	margin:30px auto;
 	max-width:400px;
 	padding: 20px;
 }
+/*Sign up page*/
 
 .form-wrap {
 	background:#fff;
@@ -69,6 +71,11 @@ a {
 	margin-top:20px;
 
 }
+/*Card page */
+
+
+
+/* Footer*/
 footer {
 	text-align:center;
 	margin-top: 10px;
@@ -77,3 +84,4 @@ footer {
 footer a {
 	color:#b9bbff;
 }
+
