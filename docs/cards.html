@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#b9deff">
+    <title>VernacuLearn - Cards</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,400;0,600;1,100;1,200&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <style>
+      #container {
+        max-width: 960px;
+      }
+
+      @media (max-width: 600px) {
+        max-width: none;
+        width: auto;
+      }
+
+
+      .card {
+        width: 250px;
+        background-color: #fff;
+        color: #999;
+        display: inline-block;
+        margin-right: 2em;
+        margin-bottom: 3em;
+      }
+
+      .card > header {
+        background: #eee;
+        padding: 0.5em;
+        font-weight: bolder;
+      }
+
+      .card > main {
+        padding: 0.75em;
+      }
+
+      .card > footer {
+        color: #ccc;
+      }
+
+
+    </style>
+  </head>
+
+  <body>
+    <div id="container">
+      <header>
+        NAV BAR GOES HERe LIVE RELOAD!
+      </header>
+
+      <main>
+
+        <section id="cards">
+
+          <div class="card" v-for="card in cards">
+            <header>
+              {{ card.word_or_phrase }}
+            </header>
+            <main>
+              Definition: {{ card.definition }}
+            </main>
+            <footer>
+              Footer of the Card
+            </footer>
+          </div>
+
+        </section>
+
+      </main>
+
+      <footer>
+        <p>Already have an account? <a href="#">Login Here</a></p>
+      </footer>
+    </div>
+
+
+    <script>
+      var cardsApp = new Vue({
+        el: "section#cards",
+
+        data: {
+
+          cards: [
+            {
+              word_or_phrase:"Enumeration",
+              definition: "A set of labels for a defined class of item."
+            }
+          ]
+
+        },
+
+        created: function() {
+          fetch("http://localhost:9999/api/cards")
+            .then( function(response) { return response.json() } )
+            .then( function(jsonData) {
+              this.cardsApp.cards = jsonData;
+            });
+        }
+      });
+    </script>
+    <script src="http://localhost:35729/livereload.js"></script>
+  </body>
+</html>
