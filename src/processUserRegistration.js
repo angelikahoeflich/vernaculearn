@@ -1,7 +1,13 @@
 const database = require("../lib/database");
+const crypto = require("crypto");
 
 module.exports = function (request, response) {
     console.log("testing:", request.body);
+
+    let hashedPassword = crypto
+        .createHmac("sha256", request.body.password)
+        .digest("hex");
+
 
     database.query(
 
@@ -11,7 +17,7 @@ module.exports = function (request, response) {
         request.body.firstName,
         request.body.lastName,
         request.body.emailAddress,
-        request.body.password,
+        hashedPassword,
         0
       ],
 
