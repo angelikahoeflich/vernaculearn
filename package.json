@@ -27,6 +27,7 @@
   },
   "homepage": "https://github.com/you-dot-dev/vernaculearn#readme",
   "dependencies": {
+    "dotenv": "^8.2.0",
     "express": "^4.17.1",
     "mysql2": "^2.1.0"
   },
