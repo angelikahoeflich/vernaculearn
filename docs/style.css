@@ -71,6 +71,17 @@ a {
 	margin-top:20px;
 
 }
+/*Registration Success Page*/
+
+#reg-wrap{
+	background:#fff;
+	padding:15px 25px;
+	color:#333;
+}
+#reg-wrap h1,
+#reg-wrap p {
+	text-align: center;
+}
 /*Card page */
 
 
@@ -84,4 +95,6 @@ footer {
 footer a {
 	color:#b9bbff;
 }
+
+
 
