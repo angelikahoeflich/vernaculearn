@@ -28,5 +28,5 @@ module.exports = function (request, response) {
     );
 
 
-    response.send("Yeah yeah, received your form!");
+    response.redirect("/reg-success?name=" + request.body.firstName);
 }

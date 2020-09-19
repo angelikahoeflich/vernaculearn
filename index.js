@@ -8,6 +8,7 @@ app.use( express.urlencoded( {extended: true} ) );
 
 /* "Web" Routes / "Pages" */
 app.get("/", require("./src/serveRegistrationPage"));
+app.get("/reg-success", require ("./src/serveSuccessPage"));
 app.get("/cards", require("./src/serveCardsPage"));
 app.get("/style.css", require("./src/serveStyle"));
 app.post("/receive-registration", require("./src/processUserRegistration"));
