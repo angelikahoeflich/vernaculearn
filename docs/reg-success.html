@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="theme-color" content="#b9deff">
+	<meta http-equiv="refresh" content="3 ;URL=">
+	<title>Welcome to VernacuLearn</title>
+	<link rel="stylesheet" href="style.css">
+	<link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,400;1,100;1,200&display=swap" rel="stylesheet">
+	<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+
+<body>
+ 	<div id="container">
+ 		<section id="reg-wrap">
+ 			<div class="user" v-for="user in users">
+ 			<h1> welcome, {{ users.firstName }} !</h1>
+ 			<p>we will be directing you shortly<br> to the good stuff</p>
+ 		</div>
+ 		</section>
+ 	</div>
+ 		
+      <footer>
+       <p>Copyright &copy; VernacuLearn 2020. <a href="#">All rights reserved.</a>
+
+
+      </footer>
+    </div>
+    <script>
+    	var reg = new Vue({
+    		el: "section#reg-wrap",
+    		data: { 
+    			users: 
+    			{ firstName: "angelika" }
+    		}
+    	})
+
+
+    </script>
+  </body>
+</html>
