@@ -1,17 +1,24 @@
 require("dotenv").config();
 
 const express = require("express");
+const session = require("express-session");
 const app = express();
 
 app.use( express.urlencoded( {extended: true} ) );
 
 
+app.set("trust proxy", 1);
+app.use( session(require("./lib/sessionOptions")) );
+
+
 /* "Web" Routes / "Pages" */
 app.get("/", require("./src/serveRegistrationPage"));
+app.get("/signin", require("./src/serveSignInPage"));
 app.get("/reg-success", require ("./src/serveSuccessPage"));
 app.get("/cards", require("./src/serveCardsPage"));
 app.get("/style.css", require("./src/serveStyle"));
 app.post("/receive-registration", require("./src/processUserRegistration"));
+app.post("/receive-signin", require("./src/processSignIn"));
 
 
 /* "API" Routes */
