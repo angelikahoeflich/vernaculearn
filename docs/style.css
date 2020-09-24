@@ -15,11 +15,14 @@ a {
 	text-decoration: none;
 
 }
+h1{
+	font-size: 2em;
+}
 /* Universal Utilities */
 
 #container {
 	margin:30px auto;
-	max-width:400px;
+	max-width:960px;
 	padding: 20px;
 }
 /*Sign up page*/
@@ -77,11 +80,14 @@ a {
 	background:#fff;
 	padding:15px 25px;
 	color:#333;
+	min-height:600px;
 }
 #reg-wrap h1,
 #reg-wrap p {
 	text-align: center;
 }
+
+
 /*Card page */
 
 

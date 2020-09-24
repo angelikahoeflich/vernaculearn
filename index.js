@@ -17,6 +17,7 @@ app.get("/signin", require("./src/serveSignInPage"));
 app.get("/reg-success", require ("./src/serveSuccessPage"));
 app.get("/cards", require("./src/serveCardsPage"));
 app.get("/style.css", require("./src/serveStyle"));
+app.get("/interests", require("./src/serveInterestsPage"));
 app.post("/receive-registration", require("./src/processUserRegistration"));
 app.post("/receive-signin", require("./src/processSignIn"));
 
